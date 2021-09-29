@@ -25,7 +25,6 @@ public class Owner {
     public void setAge(int age) {
         this.age = age;
     }
-
     private String name = "Tom";
     private String family = "Hardi";
     private int age = (int) (Math.random()*10+18);

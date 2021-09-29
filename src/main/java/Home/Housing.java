@@ -8,7 +8,8 @@ public class Housing {
     private int countFloor = 1;
     private String colourHome = "Black";
 
-    public String getOwnerHome() {
+    public String getOwnerHome()
+    {
         Owner owr = new Owner();
         this.setOwnerHome(owr.getName() + " " + owr.getFamily());
         return ownerHome;
