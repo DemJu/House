@@ -1,15 +1,15 @@
-package Home;
+package home;
 
-import People.Owner;
+import people.Owner;
 
 public class Housing {
 
     private String ownerHome;
-    private int countFloor = 1;
+    private final int countFloor = 2;
     private String colourHome = "Black";
+    private String[] colourHomeArray = {"Black","Blue","Red","White"};
 
-    public String getOwnerHome()
-    {
+    public String getOwnerHome() {
         Owner owr = new Owner();
         this.setOwnerHome(owr.getName() + " " + owr.getFamily());
         return ownerHome;
@@ -23,11 +23,8 @@ public class Housing {
         return countFloor;
     }
 
-    public void setCountFloor(int countFloor) {
-        this.countFloor = countFloor;
-    }
-
     public String getColourHome() {
+        this.setColourHome(colourHomeArray[(int) (Math.random()*colourHomeArray.length)]);
         return colourHome;
     }
 
